@@ -1,0 +1,23 @@
+// Suppose that the tuition for a university is Rs 50,000 this year and increases 5% every year. 
+ Write a program to compute and display the tuition fee for 10 consecutive years.//
+ 
+ 
+ 
+ import java.util.Scanner;
+class tution
+{
+	public static void main(String args[])
+	{
+		int fee,b,a;
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter fee:");
+		fee=in.nextInt();
+		System.out.println("You entered fee:"+fee);
+		a=((fee*5)/100);
+		for(int i=1;i<10;i++)
+		{
+			fee=fee+a;
+			System.out.println("The fee after "+i+" year:"+fee);
+		}
+	}
+}
