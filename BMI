@@ -1,0 +1,46 @@
+//*  1. Body Mass Index (BMI) is a measure of health on weight. It can be calculated by taking your weight in kilograms and dividing by the 
+square of your height in meters. The interpretation of BMI for different age group is as follows: 
+ 
+BMI Interpretation Below 
+18.5 Underweight 
+Between 18.5 and 24.9 Normal 
+Between 25 and 29.9 Overweight 
+30 or greater Obese 
+ 
+Write a program that prompts the user to enter a weight in kilograms and height in centimetres. Compute the BMI and display 
+the message accordingly.*//
+
+
+import java.util.Scanner;
+class BMI
+{
+	public static void main(String args[])
+	{
+		float bmi,kg,h;
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter weight in KG:");
+		kg=in.nextFloat();
+		System.out.println("You entered kg:"+kg);
+		System.out.println("Enter height in cm:");
+		h=in.nextFloat();
+		System.out.println("You entered height:"+h);
+		bmi=((kg*10000)/(h*h));                              //calculating BMI
+		System.out.println("bmi is:"+bmi);
+		if(bmi<18.5)
+		{
+			System.out.println("Underweight!");
+		}
+		else if(bmi>18.5 && bmi<24.9)
+		{
+			System.out.println("Normal!");
+		}
+		else if(bmi>25 && bmi<29.9)
+		{
+			System.out.println("Overweight!");
+		}
+		else if(bmi>=30)
+		{
+			System.out.println("Obese!");
+		}
+	}
+}
