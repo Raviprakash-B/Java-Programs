@@ -1,0 +1,46 @@
+/Write a java program to accept distance travelled (in kilometre) and the quantity of fuel used (in litre) for a journey and
+//determine the average fuel economy for that journey.
+//Based on this, perform the following two operations for the user:
+//Fuel estimation: Estimate the fuel needed for the distance entered by the user.
+//Distance estimation: Estimate the distance that can be travelled for the quantity of fuel entered by the user.
+
+
+import java.util.Scanner;
+class fuel
+{
+	public static void main(String args[])
+	{
+		float km,fuel,avg;
+		int ch;
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the distance(in KM):");
+		km=in.nextFloat();
+		System.out.println("Enter fuel consumed(in Litre):");
+		fuel=in.nextFloat();
+		avg=km/fuel;
+		System.out.println("Average fuel economy"+avg);
+		do
+		{
+			System.out.println("\n\n 1.Dist estimation. \n 2.Fuel estimation.");
+			System.out.println("Enter your choice(0 to stop):");
+			ch=in.nextInt();
+			switch(ch)
+			{
+				case 1:
+						System.out.println("Enter fuel consumed(in Litre):");
+						fuel=in.nextFloat();
+						km=avg*fuel;
+						System.out.println("Estimated distance="+km);
+						break;
+				case 2:
+						System.out.println("Enter the distance in(KM):");
+						km=in.nextFloat();
+						fuel=fuel*2;
+						System.out.println("Estimated fuel="+fuel);
+						break;
+			}
+		}
+		while(ch!='0');
+		//System.out.println("Press to continue(Y/N)");
+	}
+}
