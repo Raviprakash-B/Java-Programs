@@ -1,0 +1,30 @@
+//Develop a Java application to accept number of hours worked, hourly rate and determines the gross pay for an employee according
+//to the following criteria-
+//The company pays straight time for the first 40 hours worked by each employee and time and a half for all hours worked in excess
+//of 40 hours.
+
+import java.util.Scanner;
+class emp
+{
+	public static void main(String args[])
+	{
+		Float hr,rate,pay,a,b;
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the No.of hrs worked:");
+		hr=in.nextFloat();
+		System.out.println("Enter hourly rate:");
+		rate=in.nextFloat();
+		if(hr<=40)
+		{
+			pay=hr*rate;
+			System.out.println("The total pay:"+pay);
+		}
+		else
+		{
+			a=(hr-40);
+			b=a/2;
+			pay=((hr*rate)+b);
+			System.out.println("The total pay:"+pay);
+		}
+	}
+}
