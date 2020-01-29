@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class rev
+{
+	public static void main(String args[])
+	{
+		int arr[]=new int[10];
+		int narr[]=new int[10];
+		int i,num,rev=0;
+		System.out.println("enter the size");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println("enter elements");
+		for(i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		for(i=0;i<n;i++)
+		{
+			num=arr[i];
+			rev=0;
+			while(num!=0)
+			{
+				rev=rev*10;
+				rev=rev+num%10;
+				num=num/10;
+			}
+			narr[i]=rev;
+		}System.out.println("==============================");
+		for(i=0;i<n;i++)
+		{
+			System.out.println(narr[i]+"\t");
+
+		}
+	}
+
+}
