@@ -4,7 +4,7 @@ class rev
 
 		private String name;
 		private String reverse=" ";
-		//int length=name.length();
+		
 
 		Scanner read=new Scanner(System.in);
 		void get()
@@ -16,7 +16,7 @@ class rev
 		{
 			for(int i=name.length()-1;i>=0;i--)
 			{
-				reverse=reverse+name.charAt(i);
+				reverse=reverse+name.charAt(i);		//for Reverse
 			}
 		}
 
@@ -28,7 +28,7 @@ class rev
 
 		void polindrome()
 		{
-			if (name.equalsIgnoreCase(reverse))
+			if (name.equalsIgnoreCase(reverse))               //for polindrome 
 			{
 				System.out.println(name+"is Polindrome \n");
 			}
