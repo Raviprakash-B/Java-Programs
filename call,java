@@ -1,0 +1,79 @@
+import java.util.Scanner;
+class box
+{
+	double length,width,height;
+	box()                        //Default Constructor
+	{
+		length=-1;
+		width=-1;
+		height=-1;
+	}
+
+	box(double l,double w,double h)   //parameterized constructor
+	{
+		length=l;
+		width=w;
+		height=h;
+	}
+
+	void getdata()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Length ,Width ,Height ,Weight ,and Color ? \n");
+		length=sc.nextDouble();
+		width=sc.nextDouble();
+		height=sc.nextDouble();
+	}
+
+	void volume()
+	{
+		//return width*height*length;\
+		double vol=(width * height * height);
+	}
+}
+
+	class boxweight extends box
+	{
+		double weight;
+		String color;
+
+		boxweight(double l,double w,double h,double s ,String c)
+		{
+			length=l;
+			width=w;
+			height=h;
+			weight=s;
+			color=c;
+		}
+
+
+
+
+		void display()
+		{
+			System.out.println("Length = "+ length);
+			System.out.println("Width = "+ width);
+			System.out.println("Height = "+ height);
+		}
+	}
+
+
+
+	class cal
+	{
+		public static void main(String[] args)
+		{
+			//double vol;
+			boxweight obj=new boxweight(10,20,30,22.0,"red");
+			obj.getdata();
+			obj.volume();
+			obj.display();
+			//System.out.println("volume = "+ obj.vol);
+			System.out.println("Weight = "+ obj.weight);
+			System.out.println("Color = "+ obj.color);
+		}
+	}
+
+
+
+
