@@ -39,9 +39,7 @@ class box
 
 		boxweight(double l,double w,double h,double s ,String c)
 		{
-			length=l;
-			width=w;
-			height=h;
+			super(l,w,h);              //Super class
 			weight=s;
 			color=c;
 		}
