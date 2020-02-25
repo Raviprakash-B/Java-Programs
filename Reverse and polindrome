@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class rev
+{
+
+		private String name;
+		private String reverse=" ";
+		//int length=name.length();
+
+		Scanner read=new Scanner(System.in);
+		void get()
+		{
+		System.out.println("Enter a String:\n");
+		name=read.next();
+		}
+		void revvv()
+		{
+			for(int i=name.length()-1;i>=0;i--)
+			{
+				reverse=reverse+name.charAt(i);
+			}
+		}
+
+		void display()
+		{
+			System.out.println("Reversed String is: \n");
+			System.out.println(reverse);
+		}
+
+		void polindrome()
+		{
+			if (name.equalsIgnoreCase(reverse))
+			{
+				System.out.println(name+"is Polindrome \n");
+			}
+			else
+				{
+				System.out.println(name+"is not a polindrome \n");
+				}
+
+		}
+}
+class pol
+{
+	public static void main(String args[])
+	{
+		rev revv = new rev();
+		revv.get();
+		revv.revvv();
+		revv.display();
+		revv.polindrome();
+	}
+}
+
+
